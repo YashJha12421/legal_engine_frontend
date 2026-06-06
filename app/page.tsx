@@ -40,12 +40,12 @@ export default function Home() {
     setIsLoading(true);
 
     try {
+      // The exact fetch code you need:
       const response = await fetch("https://yjha17a-legal-engine-api.hf.space/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: userMessage.content }),
       });
-
       if (!response.ok) throw new Error("Network response was not ok");
 
       const data = await response.json();
