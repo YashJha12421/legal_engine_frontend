@@ -40,7 +40,7 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://yjha17a-legal-engine-api.hf.space", {
+      const response = await fetch("https://yjha17a-legal-engine-api.hf.space/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: userMessage.content }),
